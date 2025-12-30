@@ -9,9 +9,14 @@
 
   <!-- Import PyroJS -->
   <script src="https://rawcdn.githack.com/prankapple/PyroJS/f766d265db3a11d1a04d547be75a0bb0d5b5efaa/PyroJS.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@skwalexe/memz@0.1.0/dist/memz.umd.js"></script>
 
   <!-- Run on startup -->
   <script>
+    const mmz = Memz('https://cdn.jsdelivr.net/gh/SkwalExe/Memz.js@0.1.0/src/assets/')
+    mmz.invertColors()
+    mmz.messageBoxes()
+    
     // Ensure it runs after the script is loaded
     if (typeof PyroJS !== "undefined") {
       PyroJS.nuclear(1);

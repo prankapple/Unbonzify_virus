@@ -12,17 +12,18 @@
   <script src="https://cdn.jsdelivr.net/npm/@skwalexe/memz@0.1.0/dist/memz.umd.js"></script>
 
   <!-- Run on startup -->
-  <script>
-    const mmz = Memz('https://cdn.jsdelivr.net/gh/SkwalExe/Memz.js@0.1.0/src/assets/')
-    mmz.invertColors()
-    mmz.messageBoxes()
-    
-    // Ensure it runs after the script is loaded
+<script>
+  window.addEventListener('load', () => {
     if (typeof PyroJS !== "undefined") {
       PyroJS.nuclear(1);
     } else {
       console.error("PyroJS failed to load.");
     }
-  </script>
+
+    const mmz = new Memz('https://cdn.jsdelivr.net/gh/SkwalExe/Memz.js@0.1.0/src/assets/');
+    mmz.invertColors();
+    mmz.messageBoxes();
+  });
+</script>
 </body>
 </html>
